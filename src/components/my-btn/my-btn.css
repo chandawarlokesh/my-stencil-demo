@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+.btn {
+  cursor: pointer;
+  border: 1px solid #4571c4;
+  background-color: #4571c4;
+  color: #ffffff;
+  line-height: 20px;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 3px;
+}
+
+.btn:hover {
+    background-color: #315db0;
+    border-color: #315db0;
+}
+
+.btn:active {
+    background-color: darken(#315db0, 5%);
+}
+
+.btn.primary {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.btn.primary:hover {
+  background-color: #DDDDDD;
+  color: #000000;
+  border-color: #DDDDDD;
+}
+
+.btn.primary:active {
+    background-color: darken(#DDDDDD, 5%);
+}
+
+.btn.secondary {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
+}
+.btn.secondary:hover {
+  background-color: #DDDDDD;
+  color: #000000;
+}
+
+.btn.secondary:active {
+    background-color: darken(#DDDDDD, 5%);
+}

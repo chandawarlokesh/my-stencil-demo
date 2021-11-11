@@ -5,7 +5,11 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Appearance } from "./components/my-btn/appearance";
 export namespace Components {
+    interface MyBtn {
+        "appearance": Appearance | undefined;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +26,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLMyBtnElement extends Components.MyBtn, HTMLStencilElement {
+    }
+    var HTMLMyBtnElement: {
+        prototype: HTMLMyBtnElement;
+        new (): HTMLMyBtnElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +39,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "my-btn": HTMLMyBtnElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface MyBtn {
+        "appearance"?: Appearance | undefined;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +62,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "my-btn": MyBtn;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +70,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "my-btn": LocalJSX.MyBtn & JSXBase.HTMLAttributes<HTMLMyBtnElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
