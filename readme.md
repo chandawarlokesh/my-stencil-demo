@@ -73,3 +73,7 @@ The first step for all three of these strategies is to [publish to NPM](https://
 - Run `npm install my-component --save`
 - Add an import to the npm packages `import my-component;`
 - Then you can use the element anywhere in your template, JSX, html etc
+
+
+### After running - 
+![image](https://user-images.githubusercontent.com/15119623/141245871-fe978da2-03f4-48c0-8a79-86c7c6804072.png)
